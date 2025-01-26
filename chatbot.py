@@ -4,12 +4,13 @@ import pandas as pd
 import io
 import openai
 import os
+import streamlit as st
 from langchain_community.vectorstores import Chroma
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.schema import Document
 
 # Set OpenAI API key (Use environment variables for security)
-openai.api_key = "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"
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 
 CHROMA_PATH = "chroma"
 CONFIDENCE_THRESHOLD = 0.730365
